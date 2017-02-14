@@ -105,7 +105,7 @@ for(var i = 0; i < firstAndPike.dailySales.length; i++) {
 for(var i = 0; i < seaTac.dailySales.length; i++) {
 
   var newLi = document.createElement('li');
-  var newText = document.createTextNode(seaTac.dailySales[i]);
+  var newText = document.createTextNode((i + 8) + '  :00 --' + seaTac.dailySales[i] + ' cookies' );
   newLi.appendChild(newText);
   var list = document.getElementById('seaTac');
   list.appendChild(newLi);
@@ -114,7 +114,7 @@ for(var i = 0; i < seaTac.dailySales.length; i++) {
 for(var i = 0; i < seattleCenter.dailySales.length; i++) {
 
   var newLi = document.createElement('li');
-  var newText = document.createTextNode(seattleCenter.dailySales[i]);
+  var newText = document.createTextNode((i + 8) + '  :00 --' + seattleCenter.dailySales[i] + 'cookies');
   newLi.appendChild(newText);
   var list = document.getElementById('seattleCenter');
   list.appendChild(newLi);
@@ -122,7 +122,7 @@ for(var i = 0; i < seattleCenter.dailySales.length; i++) {
 for(var i = 0; i < capitolHill.dailySales.length; i++) {
 
   var newLi = document.createElement('li');
-  var newText = document.createTextNode(capitolHill.dailySales[i]);
+  var newText = document.createTextNode(( i + 8) + '  :00  --' + capitolHill.dailySales[i] + 'cookies');
   newLi.appendChild(newText);
   var list = document.getElementById('capitolHill');
   list.appendChild(newLi);
@@ -130,7 +130,7 @@ for(var i = 0; i < capitolHill.dailySales.length; i++) {
 for(var i = 0; i < alki.dailySales.length; i++) {
 
   var newLi = document.createElement('li');
-  var newText = document.createTextNode(alki.dailySales[i]);
+  var newText = document.createTextNode(( i + 8) + '  :00 --' + alki.dailySales[i] + 'cookies');
   newLi.appendChild(newText);
   var list = document.getElementById('alki');
   list.appendChild(newLi);
