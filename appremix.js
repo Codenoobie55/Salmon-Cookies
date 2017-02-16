@@ -1,6 +1,15 @@
 'use strict';
-// list of variables used for
+//arrays for times each hour until 8 amd each store plus the total
+var salesTimes = ['6am', '7am', '8am', '9am', '10am', '11 am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var stores = ['store1', 'store2', 'store3', 'store4', 'store5', 'total'];
 
+// list of variables used for
+//this will make the stores loop according to the character length
+function storeMixer(){
+  for(var o = 0; o < stores.length; o++){
+    console.log(stores[i]);
+  }
+}
 var CookieSales = function( name, minimumHours, maximumHours, avgHours) {
   this.name = name;
   this.minimumHours = minimumHours;
@@ -12,8 +21,52 @@ var CookieSales = function( name, minimumHours, maximumHours, avgHours) {
 CookieSales.prototype.randomGen = function () {
   var random = Math.floor(Math.random() * (this.maximumHours - this.minimumHours + 1) + this.minimumHours);
   return Math.round(random * this.avgHours);
-};
 
+  var mainTable = document.getElementById('main-table');
+var cookieListEl = document.getElementById('cookie-list');
+var bodyAppendEl = document.getElementById('main-table');
+
+var tableHead = document.createElement('thead');
+mainTable.appendChild(tableHead);
+
+// spacer block for thead
+var spacerTh = document.createElement('th');
+tableHead.appendChild(spacerTh);
+
+for(var h = 0; h < timeDay.length; h++){
+  var eHeaderItem = document.createElement('th');
+  eHeaderItem.textContent = timeDay[h];
+  tableHead.appendChild(eHeaderItem);
+}
+
+//
+for(var v = 0; v < stores.length; v++){
+  var loopTr = document.createElement('tr');
+  var storeTr = document.createElement('th');
+  bodyAppendEl.appendChild(loopTr);
+  storeTr.textContent = stores[v];
+  loopTr.appendChild(storeTr);
+  for(var h = 0; h < timeDay.length; h++){
+    var storeTr = document.createElement('tr');
+    var eRowItem = document.createElement('td');
+    eRowItem.textContent = aDay(onePike, seaTac, seaCenter, capHill, alki);
+    loopTr.appendChild(eRowItem);
+  }
+}
+};
+CookieSales.prototype.randomGen = function (){}
+
+var timeHeader = document.createElement('thead');
+var tableHead = document.createElement('th');
+var tableData = document.createElement('td');
+
+for( var i = 0; i < storeTimes.length; i++) {
+  var tableHead = document.createElement('th');
+  var tableData = document.createElement('td');
+//thead.appendChild
+}
+
+storeTimes;
 //math.floor(Math.random() * ((65 - 23) + 1) + 23 );
 // constructor variables
 var store1 = new CookieSales('firstAndPike', 23, 65, 6.3);
@@ -21,7 +74,6 @@ var store2 = new CookieSales('seaTac', 3, 24, 1.2);
 var store3 = new CookieSales('seattleCenter',20, 38, 3.7);
 var store4 = new CookieSales('capitolHill', 20, 38, 2.3);
 var store5 = new CookieSales('alki', 2, 16, 4.6);
-var stores = [store1, store2, store3, store4, store5];
 for(var i = 0; i < stores.length ; i++){
   for(var j = 0; j < 15; j++){
     stores[i].dailySales.push(stores[i].randomGen());

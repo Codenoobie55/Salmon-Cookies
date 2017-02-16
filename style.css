@@ -1,4 +1,15 @@
-*{
-
-  background-color: blue;
+div{
+  background-color: #40e0d0;
 }
+.container_12{
+  padding-left: 200px;
+}
+
+nav{
+  display:inline-table;
+  border-radius: 26px;
+  position:inherit;
+  /*width: 300px;*/
+  background-color: #black;
+  left: 18.2%;
+  opacity: .6;
