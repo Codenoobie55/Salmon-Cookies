@@ -1,7 +1,7 @@
 'use strict';
 // list of variables used for
 
-var CookieSales = function( name, minimumHours, maximumHours, avgHours) {
+var CookieSales = function(name, minimumHours, maximumHours, avgHours) {
   this.name = name;
   this.minimumHours = minimumHours;
   this.maximumHours = maximumHours;
