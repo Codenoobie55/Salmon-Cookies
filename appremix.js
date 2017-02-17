@@ -60,13 +60,32 @@ var timeHeader = document.createElement('thead');
 var tableHead = document.createElement('th');
 var tableData = document.createElement('td');
 
-for( var i = 0; i < storeTimes.length; i++) {
+for( var i = 0; i < salesTimes.length; i++) {
   var tableHead = document.createElement('th');
   var tableData = document.createElement('td');
 //thead.appendChild
 }
 
-storeTimes;
+var storeFormEl = document.getElementById('new-store-form');
+storeFormEl.addEventListener('submit',handleSubmit);
+function handleSubmit(event) {
+
+event.preventDefault ();
+event.stopPropagation();
+var storeName = event.target.cookieStoreName.value;
+var minCust = parseInt(event.target.maxCust.value);
+var maxCust = parseInt(event.target.minCust.value);
+var avgSale = parseFloat(event.target.avgSale.value);
+
+console.log(storeName)
+console.log(minCust)
+console.log(maxCust)
+console.log(avgSale)
+console.log('user pressed the submit form')
+};
+
+salesTimes;
+
 //math.floor(Math.random() * ((65 - 23) + 1) + 23 );
 // constructor variables
 var store1 = new CookieSales('firstAndPike', 23, 65, 6.3);
@@ -74,6 +93,7 @@ var store2 = new CookieSales('seaTac', 3, 24, 1.2);
 var store3 = new CookieSales('seattleCenter',20, 38, 3.7);
 var store4 = new CookieSales('capitolHill', 20, 38, 2.3);
 var store5 = new CookieSales('alki', 2, 16, 4.6);
+var stores = [store1, store2, store3, store4, store5];
 for(var i = 0; i < stores.length ; i++){
   for(var j = 0; j < 15; j++){
     stores[i].dailySales.push(stores[i].randomGen());
@@ -81,11 +101,10 @@ for(var i = 0; i < stores.length ; i++){
     var newText = document.createTextNode((i + 8) + ' :00 -- ' + store1.dailySales[i] + ' cookies');
     newLi.appendChild(newText);
     var list = document.getElementById('FirstAndPike');
-    list.appendChild(newLi);
+  //  list.appendChild(newLi);
   }
+  console.log(stores[i].dailySales);
 }
-console.log(stores[i].dailySales);
-
 // console.log(firstAndPike.dailySales);
 //
 // //loop iteration begins for each hour from 6AM-8pm

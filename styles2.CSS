@@ -1,0 +1,31 @@
+.main-content div{
+  display: inline-block;
+  background-color: lightblue;
+  height: 200px;
+  width: 800px;
+}
+
+.textBar{
+  height: 675px;
+  width:200px;
+  background-color: pink;
+  float: right;
+
+}
+.navbar{
+
+  background-color: green;
+  display:grid;
+  height:100px;
+  marigin-top: 50%;
+  padding:10px;
+  float: right;
+  width: 900px;
+
+}
+.headlines{
+  width:150px;
+  background-color: red;
+  height: 800px;
+
+}
