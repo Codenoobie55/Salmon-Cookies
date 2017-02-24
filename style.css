@@ -13,3 +13,7 @@ nav{
   background-color: #black;
   left: 18.2%;
   opacity: .6;
+
+content: {
+  backgorund-image: -o-linear-gradient(#336666.#66cccc);
+}
